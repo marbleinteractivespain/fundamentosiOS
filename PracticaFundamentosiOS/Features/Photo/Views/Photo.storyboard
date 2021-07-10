@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ja-CO-zMr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="VWA-f4-CNA">
+            <objects>
+                <viewController id="2ja-CO-zMr" customClass="PhotoViewController" customModule="PracticaFundamentosiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a43-tN-aYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-XO-Bjr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-rE-Fri">
+                                <rect key="frame" x="20" y="49" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Pzu-hK-Txp"/>
+                                    <constraint firstAttribute="width" constant="35" id="Tf3-r4-ZU9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeScreen:" destination="2ja-CO-zMr" eventType="touchUpInside" id="W9z-2Q-0e4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2hq-CX-jtj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qGh-rE-Fri" firstAttribute="leading" secondItem="2hq-CX-jtj" secondAttribute="leading" constant="20" id="35x-ee-Bf8"/>
+                            <constraint firstItem="GaE-XO-Bjr" firstAttribute="top" secondItem="a43-tN-aYk" secondAttribute="top" id="GXl-wo-SPe"/>
+                            <constraint firstItem="qGh-rE-Fri" firstAttribute="top" secondItem="2hq-CX-jtj" secondAttribute="top" constant="5" id="HSc-hn-raQ"/>
+                            <constraint firstItem="GaE-XO-Bjr" firstAttribute="leading" secondItem="2hq-CX-jtj" secondAttribute="leading" id="PIh-QW-CwP"/>
+                            <constraint firstItem="GaE-XO-Bjr" firstAttribute="trailing" secondItem="2hq-CX-jtj" secondAttribute="trailing" id="lD2-iN-NTs"/>
+                            <constraint firstAttribute="bottom" secondItem="GaE-XO-Bjr" secondAttribute="bottom" id="vRd-xX-DCz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="qGh-rE-Fri" id="NnZ-XB-DNf"/>
+                        <outlet property="imgPhotoView" destination="GaE-XO-Bjr" id="mqP-jb-8C8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jrx-Hb-h9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-397.10144927536237" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="375" height="375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

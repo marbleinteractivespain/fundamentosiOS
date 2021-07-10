@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DQH-Dd-zTP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="8ul-rA-dVm">
+            <objects>
+                <viewController id="xTP-jW-88n" customClass="SplashViewController" customModule="PracticaFundamentosiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecZ-8G-O36">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="0dx-fj-QGl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-wJ-B4H">
+                                <rect key="frame" x="188.5" y="385.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tjU-zC-Lho"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FXD-wJ-B4H" firstAttribute="centerY" secondItem="ecZ-8G-O36" secondAttribute="centerY" id="9g8-i6-O8O"/>
+                            <constraint firstItem="0dx-fj-QGl" firstAttribute="trailing" secondItem="tjU-zC-Lho" secondAttribute="trailing" id="Dhj-0k-Q7i"/>
+                            <constraint firstAttribute="bottom" secondItem="0dx-fj-QGl" secondAttribute="bottom" id="aWP-dq-nF9"/>
+                            <constraint firstItem="0dx-fj-QGl" firstAttribute="leading" secondItem="tjU-zC-Lho" secondAttribute="leading" id="dzQ-dI-hcM"/>
+                            <constraint firstItem="0dx-fj-QGl" firstAttribute="top" secondItem="ecZ-8G-O36" secondAttribute="top" id="hHJ-cX-Gya"/>
+                            <constraint firstItem="FXD-wJ-B4H" firstAttribute="centerX" secondItem="ecZ-8G-O36" secondAttribute="centerX" id="tw9-Y7-V5E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L5n-b4-dh2"/>
+                    <connections>
+                        <outlet property="activityindicator" destination="FXD-wJ-B4H" id="nXZ-k8-HlH"/>
+                        <segue destination="0XP-BG-GLc" kind="show" identifier="SEGUE_FROM_SPLASH_TO_HOME" id="1SW-4q-MXh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LcA-oj-vgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="126.5625"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="7QG-SW-KH6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="0XP-BG-GLc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pz4-wp-OUm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0R-BE-ILV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="83"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aw3-sI-cLf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQH-Dd-zTP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage=" " id="Fi3-UR-zbA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xTP-jW-88n" kind="relationship" relationship="rootViewController" id="Isn-4p-Omg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgo-pC-1KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name=" " width="128" height="128"/>
+        <image name="img_splash" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
